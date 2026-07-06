@@ -33,7 +33,7 @@ export default async function InfoMuroPage() {
         <h2 className="text-xl font-semibold mb-6 border-b border-stone-200 pb-2">Nuestras Especies</h2>
         <ul className="space-y-4">
           {/* Usamos .map() para recorrer el arreglo de plantas que nos devolvió la base de datos */}
-          {plantas.map((planta) => (
+         {plantas.map((planta: (typeof plantas)[number]) => (
             <li key={planta.id} className="bg-stone-50 p-4 rounded-lg border border-stone-100 hover:bg-stone-300 transition-colors">
               {/* Si la planta tiene enlaceWiki, lo usa. Si no, usa "#" como precaución */}
             <Link href={`/info/${planta.id}`}>
