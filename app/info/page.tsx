@@ -14,13 +14,13 @@ export default async function InfoMuroPage() {
         
         {/* BOTÓN DE REGRESO */}
         <div className="flex w-full justify-center pb-12">
-          <a 
-            href="http://localhost:3000/"
+          <Link
+            href="/"
             className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-sm"
           >
             <SquarePlus className="h-5 w-5" />
             <span>Regresar al menú principal</span>
-          </a>
+          </Link>
         </div>
 
         {/* PRESENTACIÓN */}
