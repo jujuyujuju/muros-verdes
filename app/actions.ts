@@ -1,6 +1,7 @@
 "use server";
 
 import { prisma } from "@/lib/prisma";
+import { revalidatePath } from 'next/cache';
 
 export async function poblarDatosIniciales() {
   try {
@@ -40,4 +41,18 @@ export async function poblarDatosIniciales() {
   } catch (error) {
     console.error("Error al cargar datos:", error);
   }
+}
+export async function agregarPlanta(formData: FormData) {
+  const nombre = formData.get('nombre') as string;
+  const descripcion = formData.get('descripcion') as string;
+  const riego = formData.get('riego') as string;
+  const enlaceWiki = formData.get('enlaceWiki') as string;
+  const muroId = formData.get('muroId') as string;
+
+  await prisma.planta.create({
+    data: { nombre, descripcion, riego, enlaceWiki, muroId },
+  });
+
+  revalidatePath('/info');
+  revalidatePath('/admin');
 }
