@@ -22,16 +22,16 @@ export default async function ComentariosPage() {
           </Link>
         </div>
 
-        <h1 className="text-2xl font-bold mb-6">Déjanos un comentario</h1>
+        <h1 className="text-2xl text-stone-900 mb-6">Déjanos un comentario</h1>
 
         <form action={agregarComentario} className="space-y-4 mb-10">
           <div>
-            <label className="block text-sm font-medium mb-1">Tu grado</label>
+            <label className="block text-sm text-stone-900 mb-1">Tu grado</label>
             <input name="grado" required maxLength={50} className="w-full border rounded-lg p-2" placeholder="Ej: 2° B" />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Comentario</label>
+            <label className="block text-sm text-stone-900 mb-1">Comentario</label>
             <textarea name="mensaje" required maxLength={300} className="w-full border rounded-lg p-2" />
           </div>
 
@@ -40,7 +40,7 @@ export default async function ComentariosPage() {
           </button>
         </form>
 
-        <h2 className="text-xl font-semibold mb-4 border-b border-stone-200 pb-2">
+        <h2 className="text-xl text-stone-800 mb-4 border-b border-stone-200 pb-2">
           Comentarios ({comentarios.length})
         </h2>
 
