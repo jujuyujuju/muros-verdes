@@ -49,7 +49,7 @@ export default async function ComentariosPage() {
             <li key={c.id} className="bg-stone-800 p-4 rounded-lg border border-stone-100">
               <div className="flex justify-between items-baseline mb-1">
                 <span className="font-bold">{c.grado}</span>
-                <span className="text-xs text-stone-400">
+                <span className="text-xs text-stone-800">
                   {c.creadoEn.toLocaleDateString('es', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}
                 </span>
               </div>
