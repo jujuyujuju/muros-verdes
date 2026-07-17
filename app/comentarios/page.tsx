@@ -27,12 +27,12 @@ export default async function ComentariosPage() {
         <form action={agregarComentario} className="space-y-4 mb-10">
           <div>
             <label className="block text-sm text-stone-900 mb-1">Tu grado</label>
-            <input name="grado" required maxLength={50} className="w-full border rounded-lg p-2" placeholder="Ej: 2° B" />
+            <input name="grado" required maxLength={50} className="w-full border rounded-lg p-2 text-stone-800" placeholder="Ej: 2° B" />
           </div>
 
           <div>
             <label className="block text-sm text-stone-900 mb-1">Comentario</label>
-            <textarea name="mensaje" required maxLength={300} className="w-full border rounded-lg p-2" />
+            <textarea name="mensaje" required maxLength={300} className="w-full border rounded-lg p-2 text-stone-800" />
           </div>
 
           <button type="submit" className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium">
