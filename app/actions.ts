@@ -5,11 +5,11 @@ import { revalidatePath } from 'next/cache';
 
 export async function poblarDatosIniciales() {
   try {
-    // 1. Limpiamos datos de prueba anteriores
+   
     await prisma.planta.deleteMany();
     await prisma.muro.deleteMany();
 
-    // 2. Creamos el muro para tu proyecto de 2° B
+    
     const muro = await prisma.muro.create({
       data: {
         nombre: "Muro Proyecto 2° B",
@@ -17,7 +17,7 @@ export async function poblarDatosIniciales() {
       },
     });
 
-    // 3. Insertamos el Galán de la noche y las Suculentas
+   
     await prisma.planta.createMany({
       data: [
         { 
@@ -43,13 +43,16 @@ export async function poblarDatosIniciales() {
   }
 }
 export async function agregarComentario(formData: FormData) {
-  const nombre = formData.get('nombre') as string;
+  const grado = formData.get('grado') as string;
   const mensaje = formData.get('mensaje') as string;
 
   await prisma.comentario.create({
-    data: { nombre, mensaje },
+    data: { grado, mensaje },
   });
+
+  revalidatePath('/comentarios');
 }
+
 export async function agregarPlanta(formData: FormData) {
   const nombre = formData.get('nombre') as string;
   const descripcion = formData.get('descripcion') as string;
