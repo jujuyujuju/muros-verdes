@@ -46,7 +46,7 @@ export default async function ComentariosPage() {
 
         <ul className="space-y-3">
           {comentarios.map((c: (typeof comentarios)[number]) => (
-            <li key={c.id} className="bg-stone-50 p-4 rounded-lg border border-stone-100">
+            <li key={c.id} className="bg-stone-800 p-4 rounded-lg border border-stone-100">
               <div className="flex justify-between items-baseline mb-1">
                 <span className="font-bold">{c.grado}</span>
                 <span className="text-xs text-stone-400">
