@@ -12,7 +12,7 @@ export async function poblarDatosIniciales() {
     // 2. Creamos el muro para tu proyecto de 2° B
     const muro = await prisma.muro.create({
       data: {
-        grado: "Muro Proyecto 2° B",
+        nombre: "Muro Proyecto 2° B",
         ubicacion: "Institución",
       },
     });
