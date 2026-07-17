@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { SquarePlus } from 'lucide-react';
 import { prisma } from '@/lib/prisma';
-
+export const dynamic = 'force-dynamic';
 export default async function InfoMuroPage() {
   // Solicitamos a la base de datos la lista completa de plantas
   const plantas = await prisma.planta.findMany();

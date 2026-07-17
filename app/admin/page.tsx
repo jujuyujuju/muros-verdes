@@ -1,6 +1,6 @@
 import { prisma } from '@/lib/prisma';
 import { agregarPlanta } from '@/app/actions';
-
+export const dynamic = 'force-dynamic';
 export default async function AdminPage() {
   const muro = await prisma.muro.findFirst();
   const plantas = await prisma.planta.findMany();

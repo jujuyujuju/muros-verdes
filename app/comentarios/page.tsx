@@ -3,6 +3,7 @@ import { agregarComentario } from '@/app/actions';
 import Link from 'next/link';
 import { SquarePlus } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
 export default async function ComentariosPage() {
   const comentarios = await prisma.comentario.findMany({
     orderBy: { creadoEn: 'desc' },

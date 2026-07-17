@@ -2,7 +2,7 @@ import React from 'react';
 import { UserButton } from '@clerk/nextjs';
 import Link from 'next/link';
 import { Leaf, Droplets, Sun, Thermometer, SquarePlus } from 'lucide-react';
-
+export const dynamic = 'force-dynamic';
 export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-stone-50 text-stone-800 font-sans">
