@@ -9,7 +9,7 @@ const client = createClient({
 await client.execute(`
   CREATE TABLE IF NOT EXISTS "Comentario" (
     "id" TEXT NOT NULL PRIMARY KEY,
-    "nombre" TEXT NOT NULL,
+    "grado" TEXT NOT NULL,
     "mensaje" TEXT NOT NULL,
     "creadoEn" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
   )
