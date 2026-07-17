@@ -9,8 +9,8 @@ export default function DashboardPage() {
       
       <nav className="flex items-center justify-between p-4 bg-white border-b border-stone-200 shadow-sm">
         <div className="flex items-center gap-2">
-          <Leaf className="w-6 h-6 text-pink-600" />
-          <span className="text-xl font-bold text-stone-900">Muros Rositas </span>
+          <Leaf className="w-6 h-6 text-green-600" />
+          <span className="text-xl font-bold text-stone-900">Muros Verdes </span>
         </div>
         <div className="flex items-center gap-4">
           <span className="text-sm font-medium text-stone-500">Panel de Control</span>

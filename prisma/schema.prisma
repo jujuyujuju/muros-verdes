@@ -25,3 +25,10 @@ model Planta {
   muroId      String
   muro        Muro    @relation(fields: [muroId], references: [id])
 }
+
+model Comentario {
+  id        String   @id @default(uuid())
+  grado    String
+  mensaje   String
+  creadoEn  DateTime @default(now())
+}

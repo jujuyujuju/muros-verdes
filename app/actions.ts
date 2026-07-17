@@ -42,6 +42,14 @@ export async function poblarDatosIniciales() {
     console.error("Error al cargar datos:", error);
   }
 }
+export async function agregarComentario(formData: FormData) {
+  const nombre = formData.get('nombre') as string;
+  const mensaje = formData.get('mensaje') as string;
+
+  await prisma.comentario.create({
+    data: { nombre, mensaje },
+  });
+}
 export async function agregarPlanta(formData: FormData) {
   const nombre = formData.get('nombre') as string;
   const descripcion = formData.get('descripcion') as string;
@@ -52,7 +60,8 @@ export async function agregarPlanta(formData: FormData) {
   await prisma.planta.create({
     data: { nombre, descripcion, riego, enlaceWiki, muroId },
   });
-
+  
   revalidatePath('/info');
   revalidatePath('/admin');
+   revalidatePath('/comentarios');
 }

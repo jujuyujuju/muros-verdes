@@ -44,5 +44,3 @@ await client.execute({
   sql: `INSERT OR IGNORE INTO "Planta" ("id", "nombre", "descripcion", "riego", "enlaceWiki", "muroId") VALUES (?, ?, ?, ?, ?, ?)`,
   args: ["planta-2", "suculentas", "grupo diverso de plantas adaptadas a climas áridos", "Cada 2-3 semanas", "https://es.wikipedia.org/wiki/Suculenta", "muro-1"],
 });
-
-console.log("Datos insertados");
