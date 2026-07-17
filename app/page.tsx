@@ -86,6 +86,10 @@ export default function Home() {
             <SquarePlus className="h-5 w-5" />
             <span>Ir a la información</span>
           </Link>
+              <a href="/comentarios" className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-medium transition-all shadow-sm">
+            <SquarePlus className="h-5 w-5" />
+            <span>Ir a los comentarios</span>
+          </a>
         </div>
       </main>
 

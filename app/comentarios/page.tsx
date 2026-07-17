@@ -34,7 +34,6 @@ export default async function ComentariosPage() {
             <label className="block text-sm text-stone-900 mb-1">Comentario</label>
             <textarea name="mensaje" required maxLength={300} className="w-full border rounded-lg p-2 text-stone-800" />
           </div>
-
           <button type="submit" className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium">
             Enviar comentario
           </button>
